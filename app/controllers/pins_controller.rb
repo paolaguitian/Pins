@@ -1,4 +1,4 @@
-class PinsController < ApplicationController
+ class PinsController < ApplicationController
   before_action :find_pin, only: [:show,:edit, :update, :destroy]
 
   def index
@@ -39,7 +39,7 @@ class PinsController < ApplicationController
   private
 
   def pin_params #method that requires pin ot have title and description
-    params.require(:pin).permit(:title, :description)
+    params.require(:pin).permit(:title, :description, :image)
   end
 
 
