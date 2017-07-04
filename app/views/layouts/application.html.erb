@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
   <head>
-    <title>Pintrest</title>
+    <title>Codegram</title>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag   'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -13,7 +13,8 @@
     <nav class="navbar navbar-default">
     <div class="container">
       <div class="navbar-brand">
-        <%= link_to "Pin Board" , root_path %>
+        <%= link_to "Sic Pic" , root_path %>
+        </div>
         <% if user_signed_in? %>
           <ul class="nav navbar-nav navbar-right">
             <li>
@@ -26,7 +27,9 @@
               <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
             </li>
           </ul>
+
         <% else %>
+        <div class = "greeting">
           <ul class="nav navbar-nav navbar-right">
             <li>
               <%= link_to "Sign Up", new_user_registration_path %>
@@ -36,7 +39,8 @@
             </li>
           </ul>
         <% end %>
-      </div>
+       </div>
+
     </div>
   </nav>
 
